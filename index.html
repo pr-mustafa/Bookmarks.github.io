@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Bookmarker</title>
+  </head>
+  <body style="background-color: #f7ecde">
+    <div class="container-lg px-3 text-white py-5">
+      <h1 class="mb-5 text-center text-dark fw-bolder">
+        Bookmarker 
+      </h1>
+      <hr class="txt-color">
+
+      <h3 class="mb-5 text-center txt-brown">
+        <i class="fa solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa solid fa-bookmark"></i>
+      </h3>
+      <i class="fa solid fa-book txt-dark" ></i> <label for="bookmarkName" class="txt-dark">Site Name:</label>
+      <input
+        type="text"
+        id="bookmarkName"
+        class="form-control my-2"
+        placeholder="Bookmark Name"
+        oninput="validateBookmarkName();"
+      />
+      <i class="fa solid fa-link txt-dark" ></i>
+      <label for="siteURL" class="txt-dark">Site URL:</label>
+      <input
+        type="text"
+        id="siteURLin"
+        class="form-control my-2"
+        placeholder="Website URL"
+        oninput="validateBookmarkURL();"
+      />
+     
+      
+      <hr class="txt-color">
+     
+
+      <button
+        class="btn btn-outline-dark my-5"
+        onclick="addBookmark();"
+        id="addBtn"
+      >Save bookmark</button>
+      <table class="table table-dark text-center">
+        <thead>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tBody"></tbody>
+      </table>
+    </div>
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.all.min.js
+    "></script>
+    <script src="./js/scripit.js"></script>
+  </body>
+</html>
